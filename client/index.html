@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sckribidi - Collaborative Canvas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Sckribidi</h1>
+      <div class="users" id="users"></div>
+    </header>
+    
+    <div class="toolbar">
+      <div class="tool-group">
+        <button id="brush" class="tool active" title="Brush">✏️</button>
+        <button id="eraser" class="tool" title="Eraser">🧹</button>
+      </div>
+      
+      <div class="tool-group">
+        <label>Size:</label>
+        <input type="range" id="size" min="1" max="50" value="3">
+        <span id="size-value">3</span>
+      </div>
+      
+      <div class="tool-group">
+        <input type="color" id="color" value="#000000">
+      </div>
+      
+      <div class="tool-group">
+        <button id="undo" title="Undo (Ctrl+Z)">↶</button>
+        <button id="redo" title="Redo (Ctrl+Y)">↷</button>
+      </div>
+      
+      <div class="tool-group">
+        <button id="clear" title="Clear Canvas">🗑️</button>
+      </div>
+    </div>
+    
+    <div class="canvas-wrapper">
+      <canvas id="canvas"></canvas>
+      <div id="cursors"></div>
+    </div>
+    
+    <div class="status" id="status">Connecting...</div>
+  </div>
+  
+  <script src="websocket.js"></script>
+  <script src="canvas.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
