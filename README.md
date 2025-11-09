@@ -186,7 +186,3 @@ The modular architecture makes it easy to extend:
 3. Make your changes
 4. Test with multiple users
 5. Submit a pull request
-
-## 📄 License
-
-MIT License - feel free to use this project for learning or commercial purposes.
